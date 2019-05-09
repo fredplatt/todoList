@@ -2,8 +2,6 @@
 
 namespace Todo\Controllers;
 
-use Slim\Views\PhpRenderer;
-
 class AddTodoController {
 
     public $listModel;
@@ -15,8 +13,8 @@ class AddTodoController {
 
     public function __invoke($request, $response, $args) {
         $userData = $request->getParsedBody();
-        $addTask = $userData['newListItem'];
-        $this->listModel->addTask($addTask);
+        $addTodo = $userData['newListItem'];
+        $this->listModel->addTodo($addTodo);
         return $response->withRedirect('/');
     }
 }

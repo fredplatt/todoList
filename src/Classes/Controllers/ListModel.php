@@ -16,7 +16,7 @@ class ListModel {
         return $query->fetchAll(\PDO::FETCH_ASSOC);
     }
 
-    public function addTask($newItem)
+    public function addTodo($newItem)
     {
             $query = $this->db->prepare("INSERT INTO `todo_table` (todo) VALUE (:newItem)");
             $query->bindParam(':newItem', $newItem);
