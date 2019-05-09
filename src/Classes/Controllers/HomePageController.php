@@ -17,7 +17,7 @@ class HomePageController {
 
     public function __invoke($request, $response, $args)
     {
-        $data['data'] = $this->listModel->getList();
-        return $response->withJson($data, 200);
+        $args['todos'] = $this->listModel->getList();
+        $this->renderer->render($response, 'homePage.phtml', $args);
     }
 }

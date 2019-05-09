@@ -3,5 +3,12 @@
 <?php
 
 foreach ($todos as $todo) {
-    echo '<div class="todo"><p>'.$todo.'</p><input type="submit" title="Complete"></div>';
+    echo '<div class="todo"><p>'.$todo['todo'].'</p><input type="submit" value="Complete!"></div>';
 }
+
+?>
+
+<form>
+<textarea>Something new to do?</textarea>
+<input type="submit">
+</form>
