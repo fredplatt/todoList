@@ -29,4 +29,5 @@ return function (App $app) {
 
     $container['HomePageController'] = new \Todo\Factories\HomePageControllerFactory();
     $container['listModel'] = new \Todo\Factories\ListModelFactory();
+    $container['AddTodoController'] = new \Todo\Factories\AddTodoControllerFactory();
 };

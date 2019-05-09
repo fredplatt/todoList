@@ -8,7 +8,8 @@ foreach ($todos as $todo) {
 
 ?>
 
-<form>
-<textarea>Something new to do?</textarea>
-<input type="submit">
+<form action="/addTodo" method="post">
+<!--<textarea name="newListItem">Something new to do?</textarea>-->
+    <input name="newListItem" type="text">
+    <input type="submit">
 </form>

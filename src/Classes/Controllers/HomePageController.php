@@ -7,9 +7,8 @@ use Slim\Views\PhpRenderer;
 class HomePageController {
     public $renderer;
     public $listModel;
-    public $db;
 
-    public function __construct(PhpRenderer $renderer, $listModel, $db)
+    public function __construct(PhpRenderer $renderer, $listModel)
     {
         $this->renderer = $renderer;
         $this->listModel = $listModel;
