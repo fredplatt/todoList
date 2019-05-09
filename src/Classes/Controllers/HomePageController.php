@@ -1,14 +1,15 @@
 <?php
 
-namespace Todo\Classes;
+namespace Todo\Controllers;
 
 use Slim\Views\PhpRenderer;
 
 class HomePageController {
     public $renderer;
     public $listModel;
+    public $db;
 
-    public function __construct(PhpRenderer $renderer, $listModel)
+    public function __construct(PhpRenderer $renderer, $listModel, $db)
     {
         $this->renderer = $renderer;
         $this->listModel = $listModel;
