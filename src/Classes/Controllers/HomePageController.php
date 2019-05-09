@@ -16,6 +16,7 @@ class HomePageController {
 
     public function __invoke($request, $response, $args)
     {
-        
+        $data['data'] = $this->listModel->getList();
+        return $response->withJson($data, 200);
     }
 }
